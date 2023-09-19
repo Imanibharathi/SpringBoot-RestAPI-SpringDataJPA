@@ -1,0 +1,5 @@
+package com.goSpring.Student.entity;
+
+public class StudentDetails {
+
+}

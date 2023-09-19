@@ -1,0 +1,23 @@
+package com.goSpring.Student.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.goSpring.Student.entity.StudentDetails;
+import com.goSpring.Student.repository.StudentRepository;
+
+@RestController
+@RequestMapping("/students")
+public class StudentController {
+	
+	StudentRepository repo;
+	
+	@GetMapping("{id}")
+	public StudentDetails getStudentDetails(@PathVariable("id") int id) {
+		StudentDetails std = repo.findById(id).get();
+		return std;
+	}
+
+}

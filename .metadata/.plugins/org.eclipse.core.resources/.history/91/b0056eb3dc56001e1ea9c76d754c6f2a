@@ -1,0 +1,5 @@
+package com.goSpring.Student.repository;
+
+public interface StudentRepository {
+
+}
